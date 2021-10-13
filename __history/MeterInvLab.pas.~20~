@@ -1,0 +1,102 @@
+unit MeterInvLab;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, ComCtrls, Menus;
+
+type
+  TMeterTrans = class(TForm)
+    MainMenu1: TMainMenu;
+    Files1: TMenuItem;
+    ransaction1: TMenuItem;
+    Users1: TMenuItem;
+    N1: TMenuItem;
+    MeterQuqery1: TMenuItem;
+    MeterAcquisition1: TMenuItem;
+    SealAcquisition1: TMenuItem;
+    N2: TMenuItem;
+    Quit1: TMenuItem;
+    MeterTransaction1: TMenuItem;
+    LaboratoryTransaction1: TMenuItem;
+    N3: TMenuItem;
+    OnlineConsumerMonitor1: TMenuItem;
+    procedure Users1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure MeterQuqery1Click(Sender: TObject);
+    procedure Quit1Click(Sender: TObject);
+    procedure MeterAcquisition1Click(Sender: TObject);
+    procedure SealAcquisition1Click(Sender: TObject);
+    procedure LaboratoryTransaction1Click(Sender: TObject);
+    procedure MeterTransaction1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MeterTrans: TMeterTrans;
+
+implementation
+
+uses MeterUsers, MeterData, MeterInvIntro, MeterQuery, MeterAcq, SealAcq,
+  LabTransactions, MSTrans;
+
+{$R *.dfm}
+
+procedure TMeterTrans.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := CaFree;
+  MeterTrans := Nil;
+  IntroForm.Close;
+end;
+
+procedure TMeterTrans.LaboratoryTransaction1Click(Sender: TObject);
+begin
+  if not assigned(LabTransForm) then LabTransForm := TLabTransForm.Create(Self);
+  LabTransForm.Show;
+end;
+
+procedure TMeterTrans.MeterAcquisition1Click(Sender: TObject);
+begin
+  if not assigned(MeterAcqForm) then MeterAcqForm := TMeterAcqForm.Create(Self);
+  MeterAcqForm.Show;
+
+end;
+
+procedure TMeterTrans.MeterQuqery1Click(Sender: TObject);
+begin
+  if not assigned(MeterQueryForm) then MeterQueryForm := TMeterQueryForm.Create(Self);
+  MeterQueryForm.Show;
+
+end;
+
+procedure TMeterTrans.MeterTransaction1Click(Sender: TObject);
+begin
+  if not assigned(MSTransactionForm) then MSTransactionForm := TMSTransactionForm.Create(Self);
+  MSTransactionForm.Show;
+end;
+
+procedure TMeterTrans.Quit1Click(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TMeterTrans.SealAcquisition1Click(Sender: TObject);
+begin
+  if not assigned(SealAcqForm) then SealAcqForm := TSealAcqForm.Create(Self);
+  SealAcqForm.Show;
+end;
+
+procedure TMeterTrans.Users1Click(Sender: TObject);
+begin
+  MeterDataModule.Users.Open;
+
+  if not assigned(UsersForm) then UsersForm := TUsersForm.Create(Self);
+  UsersForm.Show;
+
+end;
+
+end.

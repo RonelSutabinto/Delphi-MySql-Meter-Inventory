@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2011/09/08 16:22:36.066.dfm,D:\applications\zaneco\meterinv\MeterData.dfm=C:\Users\manny\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2011/09/08 16:22:36.066.pas,D:\applications\zaneco\meterinv\MeterData.pas=C:\Users\manny\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2011/09/08 16:22:49.303.dproj,D:\applications\zaneco\meterinv\MeterInv.dproj=C:\Users\manny\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2011/09/12 13:14:44.106.dfm,D:\applications\zaneco\meterinv\MeterInvLab.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/09/12 13:14:44.106.pas,D:\applications\zaneco\meterinv\MeterInvLab.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/09/12 14:21:46.155.pas,D:\applications\zaneco\meterinv\MeterUsers.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/09/12 14:21:46.155.dfm,D:\applications\zaneco\meterinv\MeterUsers.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/09/13 11:28:43.061.pas,D:\applications\zaneco\meterinv\MeterQuery.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/09/13 11:28:43.061.dfm,D:\applications\zaneco\meterinv\MeterQuery.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/09/27 14:33:15.522.pas,D:\applications\zaneco\meterinv\MeterAcq.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/09/27 14:33:15.522.dfm,D:\applications\zaneco\meterinv\MeterAcq.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/09/27 16:26:51.391.dfm,D:\applications\zaneco\meterinv\SealAcq.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/09/27 16:26:51.391.pas,D:\applications\zaneco\meterinv\SealAcq.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/10/13 11:44:23.384.dfm,D:\applications\zaneco\meterinv\LabTransactions.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/10/13 11:44:23.384.pas,D:\applications\zaneco\meterinv\LabTransactions.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/10/19 13:54:52.406.pas,D:\applications\zaneco\meterinv\MSTrans.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+    <Transaction>2011/10/19 13:54:52.406.dfm,D:\applications\zaneco\meterinv\MSTrans.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/11/16 10:01:50.052.dfm,D:\applications\zaneco\meterinv\SealQuery.dfm=D:\applications\zaneco\meterinv\Unit1.dfm</Transaction>
+    <Transaction>2011/11/16 10:01:50.052.pas,D:\applications\zaneco\meterinv\SealQuery.pas=D:\applications\zaneco\meterinv\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

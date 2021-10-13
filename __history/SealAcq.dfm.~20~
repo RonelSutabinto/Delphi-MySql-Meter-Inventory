@@ -1,0 +1,493 @@
+object SealAcqForm: TSealAcqForm
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'SealAcqForm'
+  ClientHeight = 432
+  ClientWidth = 485
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object NxHeaderPanel1: TNxHeaderPanel
+    Left = 0
+    Top = 0
+    Width = 485
+    Height = 432
+    AdaptiveColors = False
+    Align = alClient
+    Caption = 'Meter Seal Acquisition '
+    HeaderFont.Charset = DEFAULT_CHARSET
+    HeaderFont.Color = clWindowText
+    HeaderFont.Height = -12
+    HeaderFont.Name = 'Tahoma'
+    HeaderFont.Style = [fsBold]
+    ParentHeaderFont = False
+    TabOrder = 0
+    DesignSize = (
+      483
+      430)
+    FullWidth = 485
+    object NxLinkLabel1: TNxLinkLabel
+      Left = 434
+      Top = 5
+      Width = 31
+      Height = 15
+      Anchors = [akTop, akRight]
+      Caption = 'Close'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      HoverColor = clRed
+      ParentFont = False
+      TextDistance = 2
+      Transparent = True
+      VertSpacing = 2
+      OnClick = NxLinkLabel1Click
+    end
+    object Edit1: TEdit
+      Left = 8
+      Top = 35
+      Width = 201
+      Height = 19
+      Ctl3D = False
+      ParentCtl3D = False
+      TabOrder = 1
+      Text = 'Search Supplier'
+      OnChange = Edit1Change
+      OnClick = Edit1Click
+    end
+    object NxLinkLabel2: TNxLinkLabel
+      Left = 374
+      Top = 37
+      Width = 20
+      Height = 15
+      Caption = 'Add'
+      HoverColor = clRed
+      TextDistance = 2
+      VertSpacing = 2
+      OnClick = NxLinkLabel2Click
+    end
+    object NxLinkLabel3: TNxLinkLabel
+      Left = 408
+      Top = 37
+      Width = 19
+      Height = 15
+      Caption = 'Edit'
+      HoverColor = clRed
+      TextDistance = 2
+      VertSpacing = 2
+      OnClick = NxLinkLabel3Click
+    end
+    object NxLinkLabel4: TNxLinkLabel
+      Left = 440
+      Top = 37
+      Width = 32
+      Height = 15
+      Caption = 'Delete'
+      HoverColor = clRed
+      TextDistance = 2
+      VertSpacing = 2
+      OnClick = NxLinkLabel4Click
+    end
+    object CRDBGrid1: TCRDBGrid
+      Left = 8
+      Top = 59
+      Width = 465
+      Height = 364
+      DataSource = MeterDataModule.dsSLAcq
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+      ReadOnly = True
+      TabOrder = 5
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'DateAcquired'
+          Title.Alignment = taCenter
+          Title.Caption = 'Date Acquired'
+          Width = 72
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Supplier'
+          Title.Alignment = taCenter
+          Width = 142
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Address'
+          Title.Alignment = taCenter
+          Width = 105
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Boxes'
+          Title.Alignment = taCenter
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Pcs'
+          Title.Alignment = taCenter
+          Width = 52
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Cost'
+          Title.Alignment = taCenter
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TotalPcs'
+          Title.Alignment = taCenter
+          Width = 94
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'Amount'
+          Width = 64
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'RRNumber'
+          Title.Alignment = taCenter
+          Width = 124
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'DRNumber'
+          Title.Alignment = taCenter
+          Width = 124
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'SINumber'
+          Title.Alignment = taCenter
+          Width = 124
+          Visible = True
+        end>
+    end
+    object MeterSealPanel: TNxHeaderPanel
+      Left = 87
+      Top = 84
+      Width = 308
+      Height = 261
+      AdaptiveColors = False
+      Caption = 'Seal Acquisition Record'
+      HeaderFont.Charset = DEFAULT_CHARSET
+      HeaderFont.Color = clWindowText
+      HeaderFont.Height = -11
+      HeaderFont.Name = 'Tahoma'
+      HeaderFont.Style = []
+      ParentHeaderFont = False
+      TabOrder = 6
+      Visible = False
+      DesignSize = (
+        306
+        259)
+      FullWidth = 308
+      object Label1: TLabel
+        Left = 15
+        Top = 40
+        Width = 68
+        Height = 13
+        Caption = 'Date Acquired'
+        FocusControl = DBEdit1
+      end
+      object Label2: TLabel
+        Left = 29
+        Top = 64
+        Width = 54
+        Height = 13
+        Caption = 'RR Number'
+        FocusControl = DBEdit2
+      end
+      object Label3: TLabel
+        Left = 29
+        Top = 88
+        Width = 54
+        Height = 13
+        Caption = 'DR Number'
+        FocusControl = DBEdit3
+      end
+      object Label4: TLabel
+        Left = 33
+        Top = 112
+        Width = 50
+        Height = 13
+        Caption = 'SI Number'
+        FocusControl = DBEdit4
+      end
+      object Label6: TLabel
+        Left = 44
+        Top = 160
+        Width = 39
+        Height = 13
+        Caption = 'Address'
+        FocusControl = DBEdit6
+      end
+      object Label7: TLabel
+        Left = 54
+        Top = 184
+        Width = 29
+        Height = 13
+        Caption = 'Boxes'
+        FocusControl = DBEdit7
+      end
+      object Label8: TLabel
+        Left = 39
+        Top = 208
+        Width = 44
+        Height = 13
+        Caption = 'Pcs / Box'
+        FocusControl = DBEdit8
+      end
+      object Label9: TLabel
+        Left = 40
+        Top = 232
+        Width = 43
+        Height = 13
+        Caption = 'Total Pcs'
+        FocusControl = DBEdit9
+      end
+      object DBEdit1: TDBEdit
+        Left = 88
+        Top = 37
+        Width = 200
+        Height = 21
+        DataField = 'DateAcquired'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 0
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit2: TDBEdit
+        Left = 88
+        Top = 61
+        Width = 200
+        Height = 21
+        DataField = 'RRNumber'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 1
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit3: TDBEdit
+        Left = 88
+        Top = 85
+        Width = 200
+        Height = 21
+        DataField = 'DRNumber'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 2
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit4: TDBEdit
+        Left = 88
+        Top = 109
+        Width = 200
+        Height = 21
+        DataField = 'SINumber'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 3
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit5: TDBEdit
+        Left = 88
+        Top = 133
+        Width = 200
+        Height = 21
+        DataField = 'Supplier'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 4
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit6: TDBEdit
+        Left = 88
+        Top = 157
+        Width = 200
+        Height = 21
+        DataField = 'Address'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 5
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit7: TDBEdit
+        Left = 88
+        Top = 181
+        Width = 200
+        Height = 21
+        DataField = 'Boxes'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 6
+        OnExit = DBEdit7Exit
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit8: TDBEdit
+        Left = 88
+        Top = 205
+        Width = 200
+        Height = 21
+        DataField = 'Pcs'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 7
+        OnExit = DBEdit7Exit
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object DBEdit9: TDBEdit
+        Left = 88
+        Top = 229
+        Width = 200
+        Height = 21
+        DataField = 'TotalPcs'
+        DataSource = MeterDataModule.dsSLAcq
+        TabOrder = 8
+        OnKeyPress = DBEdit1KeyPress
+      end
+      object NxLinkLabel9: TNxLinkLabel
+        Left = 228
+        Top = 6
+        Width = 25
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Save'
+        HoverColor = clRed
+        TextDistance = 2
+        Transparent = True
+        VertSpacing = 2
+        OnClick = NxLinkLabel9Click
+      end
+      object NxLinkLabel8: TNxLinkLabel
+        Left = 264
+        Top = 6
+        Width = 33
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Cancel'
+        HoverColor = clRed
+        TextDistance = 2
+        Transparent = True
+        VertSpacing = 2
+        OnClick = NxLinkLabel8Click
+      end
+      object NxLinkLabel10: TNxLinkLabel
+        Left = 44
+        Top = 136
+        Width = 39
+        Height = 15
+        Caption = 'Supplier'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlue
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        HoverColor = clRed
+        ParentFont = False
+        TextDistance = 2
+        VertSpacing = 2
+        OnClick = NxLinkLabel10Click
+      end
+    end
+    object SupplierPanel: TNxHeaderPanel
+      Left = 57
+      Top = 20
+      Width = 337
+      Height = 350
+      AdaptiveColors = False
+      Caption = 'Suppliers on File'
+      HeaderFont.Charset = DEFAULT_CHARSET
+      HeaderFont.Color = clWindowText
+      HeaderFont.Height = -11
+      HeaderFont.Name = 'Tahoma'
+      HeaderFont.Style = []
+      ParentHeaderFont = False
+      TabOrder = 7
+      Visible = False
+      DesignSize = (
+        335
+        348)
+      FullWidth = 337
+      object NxLinkLabel11: TNxLinkLabel
+        Left = 251
+        Top = 6
+        Width = 30
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Select'
+        HoverColor = clRed
+        TextDistance = 2
+        Transparent = True
+        VertSpacing = 2
+      end
+      object NxLinkLabel12: TNxLinkLabel
+        Left = 290
+        Top = 6
+        Width = 33
+        Height = 15
+        Anchors = [akTop, akRight]
+        Caption = 'Cancel'
+        HoverColor = clRed
+        TextDistance = 2
+        Transparent = True
+        VertSpacing = 2
+        OnClick = NxLinkLabel12Click
+      end
+      object CRDBGrid3: TCRDBGrid
+        Left = 16
+        Top = 42
+        Width = 304
+        Height = 295
+        DataSource = MeterDataModule.dsSupplier
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        ReadOnly = True
+        TabOrder = 2
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        Columns = <
+          item
+            Expanded = False
+            FieldName = 'supplier'
+            Title.Alignment = taCenter
+            Title.Caption = 'Supplier'
+            Width = 151
+            Visible = True
+          end
+          item
+            Expanded = False
+            FieldName = 'address'
+            Title.Alignment = taCenter
+            Title.Caption = 'Address'
+            Width = 244
+            Visible = True
+          end>
+      end
+    end
+  end
+end

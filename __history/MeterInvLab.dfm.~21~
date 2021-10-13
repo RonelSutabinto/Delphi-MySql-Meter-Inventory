@@ -1,0 +1,77 @@
+object MeterTrans: TMeterTrans
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'Meter Inventory and Laboratory Online System'
+  ClientHeight = 124
+  ClientWidth = 316
+  Color = clWindow
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 56
+    Top = 16
+    object Files1: TMenuItem
+      Caption = 'Files'
+      object Users1: TMenuItem
+        Caption = 'Users'
+        ShortCut = 112
+        OnClick = Users1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object MeterQuqery1: TMenuItem
+        Caption = 'Meter Query'
+        ShortCut = 113
+        OnClick = MeterQuqery1Click
+      end
+      object MeterAcquisition1: TMenuItem
+        Caption = 'Meter Acquisition'
+        ShortCut = 114
+        OnClick = MeterAcquisition1Click
+      end
+      object SealAcquisition1: TMenuItem
+        Caption = 'Seal Acquisition'
+        ShortCut = 115
+        OnClick = SealAcquisition1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Quit1: TMenuItem
+        Caption = 'Quit'
+        OnClick = Quit1Click
+      end
+    end
+    object ransaction1: TMenuItem
+      Caption = 'Transaction'
+      object MeterTransaction1: TMenuItem
+        Caption = 'Meter/Seal Transaction'
+        ShortCut = 116
+        OnClick = MeterTransaction1Click
+      end
+      object LaboratoryTransaction1: TMenuItem
+        Caption = 'Laboratory Transaction'
+        ShortCut = 117
+        OnClick = LaboratoryTransaction1Click
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object OnlineConsumerMonitor1: TMenuItem
+        Caption = 'Online Consumer Monitor'
+        ShortCut = 118
+      end
+    end
+  end
+end

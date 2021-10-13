@@ -1,0 +1,119 @@
+object MeterTrans: TMeterTrans
+  Left = 0
+  Top = 0
+  Align = alClient
+  Caption = 'Meter Inventory and Laboratory Online System'
+  ClientHeight = 412
+  ClientWidth = 727
+  Color = clWindow
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  FormStyle = fsMDIForm
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 200
+    Width = 319
+    Height = 84
+    Caption = 'Metering'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clGreen
+    Font.Height = -72
+    Font.Name = 'Rosewood Std Regular'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Top = 40
+    Width = 33
+    Height = 202
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clOlive
+    Font.Height = -173
+    Font.Name = 'Rosewood Std Regular'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object ComboBox1: TComboBox
+    Left = 232
+    Top = 88
+    Width = 145
+    Height = 21
+    ItemIndex = 0
+    TabOrder = 0
+    Text = 'NONE'
+    OnChange = ComboBox1Change
+    Items.Strings = (
+      'NONE'
+      'DMO'
+      'PAO'
+      'SAO'
+      'LAO')
+  end
+  object MainMenu1: TMainMenu
+    Left = 472
+    Top = 24
+    object Files1: TMenuItem
+      Caption = 'Files'
+      object Users1: TMenuItem
+        Caption = 'Users'
+        ShortCut = 112
+        OnClick = Users1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object MeterQuqery1: TMenuItem
+        Caption = 'Meter Query'
+        ShortCut = 113
+        OnClick = MeterQuqery1Click
+      end
+      object SealQuery1: TMenuItem
+        Caption = 'Seal Query'
+        ShortCut = 114
+        OnClick = SealQuery1Click
+      end
+      object N3: TMenuItem
+        Caption = '-'
+      end
+      object MeterAcquisition1: TMenuItem
+        Caption = 'Meter Acquisition'
+        ShortCut = 115
+        OnClick = MeterAcquisition1Click
+      end
+      object SealAcquisition1: TMenuItem
+        Caption = 'Seal Acquisition'
+        ShortCut = 116
+        OnClick = SealAcquisition1Click
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object Quit1: TMenuItem
+        Caption = 'Quit'
+        OnClick = Quit1Click
+      end
+    end
+    object ransaction1: TMenuItem
+      Caption = 'Transaction'
+      object MeterTransaction1: TMenuItem
+        Caption = 'Meter/Seal Transaction'
+        ShortCut = 117
+        OnClick = MeterTransaction1Click
+      end
+      object LaboratoryTransaction1: TMenuItem
+        Caption = 'Laboratory Transaction'
+        ShortCut = 118
+        OnClick = LaboratoryTransaction1Click
+      end
+    end
+  end
+end

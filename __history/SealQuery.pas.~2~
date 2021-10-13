@@ -1,0 +1,56 @@
+unit SealQuery;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, NxCollection, Grids, DBGrids, CRGrid, DB, DBAccess, MyAccess, MemDS,
+  StdCtrls, NxEdit;
+
+type
+  TSealQueryForm = class(TForm)
+    NxHeaderPanel1: TNxHeaderPanel;
+    NxLinkLabel1: TNxLinkLabel;
+    Edit1: TNxEdit;
+    SInq: TMyQuery;
+    SInqidSealInv: TLargeintField;
+    SInqidTechCrew: TFloatField;
+    SInqSealNumber: TStringField;
+    SInqStatus: TStringField;
+    SInqDateInst: TDateField;
+    SInqMeterBrand: TStringField;
+    SInqSerialNumber: TStringField;
+    SInqidSealBatch: TFloatField;
+    SInqCode: TFloatField;
+    SInqname: TStringField;
+    SInqaddress: TStringField;
+    dsSInq: TMyDataSource;
+    CRDBGrid1: TCRDBGrid;
+    SInqcrew: TStringField;
+    procedure Edit1Change(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  SealQueryForm: TSealQueryForm;
+
+implementation
+
+uses MeterData;
+
+{$R *.dfm}
+
+procedure TSealQueryForm.Edit1Change(Sender: TObject);
+begin
+  if Edit1.Text = '' then
+    begin
+      Edit1.Text := 'Search Seal Number';
+      Edit1.SelectAll;
+      exit;
+    end;
+end;
+
+end.
